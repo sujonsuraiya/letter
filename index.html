@@ -15,13 +15,37 @@
         align-items:center;
         height:100vh;
         overflow:hidden;
+        position: relative;
     }
+
+    /* FLOWER DECORATIONS */
+    .flower{
+        position:absolute;
+        width:45px;
+        height:45px;
+        background:#ff9ec9;
+        border-radius:50%;
+        filter: blur(0.4px);
+        box-shadow:
+            -20px -10px 0 #ffb7d9,
+            20px -10px 0 #ffb7d9,
+            20px 20px 0 #ffb7d9,
+            -20px 20px 0 #ffb7d9;
+        opacity:0.45;
+    }
+
+    .flower.f1{ top:20px; left:20px; }
+    .flower.f2{ top:80px; right:40px; transform:scale(0.9); }
+    .flower.f3{ bottom:60px; left:50px; transform:scale(1.1); }
+    .flower.f4{ bottom:20px; right:30px; transform:scale(0.8); }
 
     /* wrapper */
     .container{
         width:100%;
         max-width:700px;
         padding:20px;
+        position: relative;
+        z-index: 100;
     }
 
     /* CARD PAGE */
@@ -63,6 +87,7 @@
         border-radius:20px;
         animation: slideUp 0.8s ease both;
         box-shadow:0 3px 12px rgba(0,0,0,0.15);
+        position: relative;
     }
 
     #letterPage h2{
@@ -77,6 +102,33 @@
         border-radius:15px;
         line-height:1.6;
         font-size:16px;
+        position: relative;
+    }
+
+    /* Small flowers inside letter */
+    .mini-flower{
+        position:absolute;
+        width:18px;
+        height:18px;
+        background:#ff8fb7;
+        border-radius:50%;
+        box-shadow:
+            -10px -5px 0 #ffb7d9,
+            10px -5px 0 #ffb7d9,
+            10px 10px 0 #ffb7d9,
+            -10px 10px 0 #ffb7d9;
+        opacity:0.6;
+    }
+    .mini1{ top:-10px; right:10px; }
+    .mini2{ bottom:-10px; left:10px; }
+
+    .signature{
+        margin-top:18px;
+        text-align:right;
+        font-weight:bold;
+        color:#ff4f8b;
+        font-size:18px;
+        font-family: "Brush Script MT","Pacifico",cursive;
     }
 
     /* Animations */
@@ -93,6 +145,12 @@
 </head>
 <body>
 
+<!-- Background Flowers -->
+<div class="flower f1"></div>
+<div class="flower f2"></div>
+<div class="flower f3"></div>
+<div class="flower f4"></div>
+
 <div class="container">
 
     <!-- CARD PAGE -->
@@ -105,27 +163,42 @@
     <!-- LETTER PAGE -->
     <div id="letterPage">
         <h2>My Love!! 💖</h2>
+
         <div class="letter-box">
+
+            <div class="mini-flower mini1"></div>
+            <div class="mini-flower mini2"></div>
+
             <p>To my Sunflower🌻💗,</p>
 
             <p>
-                So, prothomei boli I love you and love you in every universe😉... tumi amar life e ashar por theke amr life onek change hoye gese seta tumio jano. tmr hashi amar upor magic er moto kaj kore,, like amar mood off hoilo tmi in seconds e amar mood thik kore dao.. oi jonnoi boli tmi jadu paro..ami majhe majhe bhabi j kotota lucky hole Suraiyar moto girlfriend paisi ami.. tumi amar life er sobcheye boro blessing..and ami tomake kokhono harate chai na. tumi amar life er Sunflower🌻💗
+                So, prothomei boli I love you and love you in every universe😉...  
+                tumi amar life e ashar por theke amr life onek change hoye gese seta tumio jano.  
+                tmr hashi amar upor magic er moto kaj kore,, like amar mood off hoilo  
+                tmi in seconds e amar mood thik kore dao.. oi jonnoi boli tmi jadu paro..  
+                ami majhe majhe bhabi j kotota lucky hole Suraiyar moto girlfriend paisi ami..  
+                tumi amar life er sobcheye boro blessing..and ami tomake kokhono harate chai na.  
+                tumi amar life er Sunflower🌻💗
             </p>
 
             <p>
-            Tumi janoi ami tomar jonno kmn feel kori.. tumi akhon amr daily routine hoye geso, amake amon kore keu bhalobashe ni.. you love me the way i'm and I'm loving you till my last breath.. tumi amar life er mango juice🍹, amar Sunflower🌻♡.  and lastly cholooooo biyeeee koriiiiiiiiiiiiiiiii🫶🏻🥹❤️‍🩹
+                Tumi janoi ami tomar jonno kmn feel kori..  
+                tumi akhon amr daily routine hoye geso, amake amon kore keu bhalobashe ni..  
+                you love me the way i'm and I'm loving you till my last breath..  
+                tumi amar life er mango juice🍹, amar Sunflower🌻♡.  
+                and lastly cholooooo biyeeee koriiiiiiiiiiiiiiiii🫶🏻🥹❤️‍🩹
             </p>
 
-            <p>
-            I love you, Always & Forever ❤️
-            </p>
+            <p>I love you, Always & Forever ❤️</p>
+
+            <!-- Signature -->
+            <div class="signature">— Sujon</div>
         </div>
     </div>
 
 </div>
 
 <script>
-    // Button click to show the letter
     const openBtn = document.getElementById("openBtn");
     const cardPage = document.getElementById("cardPage");
     const letterPage = document.getElementById("letterPage");
