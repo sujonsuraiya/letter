@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love</title>
+<style>
+    body{
+        margin:0;
+        padding:0;
+        font-family: "Poppins", sans-serif;
+        background:#ffd9e6;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        overflow:hidden;
+    }
+
+    /* wrapper */
+    .container{
+        width:100%;
+        max-width:700px;
+        padding:20px;
+    }
+
+    /* CARD PAGE */
+    #cardPage{
+        background:white;
+        padding:30px;
+        border-radius:20px;
+        text-align:center;
+        box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        animation: fadeIn 1s ease;
+    }
+
+    #cardPage h1{
+        font-size:26px;
+        color:#ff4f8b;
+    }
+
+    #openBtn{
+        margin-top:20px;
+        background:#ff4f8b;
+        padding:12px 25px;
+        border:none;
+        outline:none;
+        color:white;
+        font-size:18px;
+        border-radius:50px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+    #openBtn:hover{
+        background:#ff1f6c;
+    }
+
+    /* LETTER PAGE */
+    #letterPage{
+        display:none;
+        background:white;
+        padding:25px;
+        border-radius:20px;
+        animation: slideUp 0.8s ease both;
+        box-shadow:0 3px 12px rgba(0,0,0,0.15);
+    }
+
+    #letterPage h2{
+        color:#ff4f8b;
+        text-align:center;
+        margin-bottom:15px;
+    }
+
+    .letter-box{
+        background:#ffe6ef;
+        padding:20px;
+        border-radius:15px;
+        line-height:1.6;
+        font-size:16px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn{
+        from{opacity:0;}
+        to{opacity:1;}
+    }
+
+    @keyframes slideUp{
+        from{transform:translateY(50px);opacity:0;}
+        to{transform:translateY(0);opacity:1;}
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- CARD PAGE -->
+    <div id="cardPage">
+        <h1>For My SuraiyaBaby 💗</h1>
+        <p>Assignment badh diya tmr jonno eigula banai😂🤣.</p>
+        <button id="openBtn">Click korooooo💌</button>
+    </div>
+
+    <!-- LETTER PAGE -->
+    <div id="letterPage">
+        <h2>My Love!! 💖</h2>
+        <div class="letter-box">
+            <p>To my Sunflower🌻💗,</p>
+
+            <p>
+                So, prothomei boli I love you and love you in every universe😉... tumi amar life e ashar por theke amr life onek change hoye gese seta tumio jano. tmr hashi amar upor magic er moto kaj kore,, like amar mood off hoilo tmi in seconds e amar mood thik kore dao.. oi jonnoi boli tmi jadu paro..ami majhe majhe bhabi j kotota lucky hole Suraiyar moto girlfriend paisi ami.. tumi amar life er sobcheye boro blessing..and ami tomake kokhono harate chai na. tumi amar life er Sunflower🌻💗
+            </p>
+
+            <p>
+            Tumi janoi ami tomar jonno kmn feel kori.. tumi akhon amr daily routine hoye geso, amake amon kore keu bhalobashe ni.. you love me the way i'm and I'm loving you till my last breath.. tumi amar life er mango juice🍹, amar Sunflower🌻♡.  and lastly cholooooo biyeeee koriiiiiiiiiiiiiiiii🫶🏻🥹❤️‍🩹
+            </p>
+
+            <p>
+            I love you, Always & Forever ❤️
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Button click to show the letter
+    const openBtn = document.getElementById("openBtn");
+    const cardPage = document.getElementById("cardPage");
+    const letterPage = document.getElementById("letterPage");
+
+    openBtn.addEventListener("click", () => {
+        cardPage.style.display = "none";
+        letterPage.style.display = "block";
+    });
+</script>
+
+</body>
+</html>
